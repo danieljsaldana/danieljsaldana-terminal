@@ -1,11 +1,11 @@
 {
-  "name": "liveterm",
+  "name": "Daniel J. Saldaña - Terminal",
   "version": "0.1.0",
   "license": "MIT",
   "author": {
-    "name": "Vincent Wu",
-    "url": "https://cveinnt.com",
-    "email": "contact@wensenwu.com"
+    "name": "Daniel J. Saldaña",
+    "url": "https://danieljsaldaña.com",
+    "email": "info@danieljsaldaña.com"
   },
   "scripts": {
     "dev": "next dev",

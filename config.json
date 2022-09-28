@@ -4,13 +4,14 @@
   "name": "Daniel J. Saldaña",
   "ascii": "liveterm",
   "social": {
-    "github": "github",
-    "linkedin": "linkedin",
-    "instagram": "instagram"
+    "github": "danieljesussp",
+    "linkedin": "daniel-s-p",
+    "instagram": "danieljesussp",
+    "unsplash": "@danieljsaldana"
   },
   "email": "info@danieljsaldaña.com",
-  "ps1_hostname": "liveterm",
-  "ps1_username": "visitor",
+  "ps1_hostname": "goliat",
+  "ps1_username": "visitante",
   "repo": "https://github.com/Cveinnt/LiveTerm",
   "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
   "donate_urls": {
