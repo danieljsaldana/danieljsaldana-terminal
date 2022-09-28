@@ -1,11 +1,11 @@
 {
-  "name": "Daniel J. Saldaña - Terminal",
+  "name": "danieljsaldana-terminal",
   "version": "0.1.0",
   "license": "MIT",
   "author": {
     "name": "Daniel J. Saldaña",
-    "url": "https://danieljsaldaña.com",
-    "email": "info@danieljsaldaña.com"
+    "url": "https://terminal.xn--danieljsaldaa-tkb.com",
+    "email": "info@xn--danieljsaldaa-tkb.com"
   },
   "scripts": {
     "dev": "next dev",
