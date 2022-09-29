@@ -3,7 +3,7 @@
   "title": "Daniel J. Saldaña 💾 | Terminal",
   "description": "Terminal interactiva 💻 pon a prueba tus conocimientos de linux!",
   "name": "Daniel J. Saldaña",
-  "ascii": "terminal",
+  "ascii": "cveinnt",
   "social": {
     "github": "danieljesussp",
     "linkedin": "daniel-s-p",
@@ -14,7 +14,7 @@
   "email": "info@danieljsaldaña.com",
   "ps1_hostname": "goliat",
   "ps1_username": "visitante",
-  "repo": "https://github.com/",
+  "repo": "https://github.com",
   "resume_url": "https://danieljsaldaña.com",
   "colors": {
     "light": {

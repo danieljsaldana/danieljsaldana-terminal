@@ -1,8 +1,8 @@
 {
-  "name": "LiveTerm",
-  "short_name": "LiveTerm",
-  "theme_color": "#2E3440",
-  "background_color": "#2E3440",
+  "name": "M4TT72 | Yassine Fathi",
+  "short_name": "M4TT72",
+  "theme_color": "#D79921",
+  "background_color": "#262626",
   "display": "fullscreen",
   "orientation": "portrait",
   "scope": "/",
@@ -47,3 +47,4 @@
   ],
   "splash_pages": null
 }
+

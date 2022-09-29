@@ -1,5 +1,6 @@
 // List of commands that do not require API calls
 
+import packageJson from '../../../package.json';
 import * as bin from './index';
 import config from '../../../config.json';
 
@@ -82,7 +83,7 @@ export const unsplash = async (args: string[]): Promise<string> => {
 // Search
 export const google = async (args: string[]): Promise<string> => {
   window.open(`https://google.com/search?q=${args.join(' ')}`);
-  return `buscando en google ${args.join(' ')}...`;
+  return `Buscando en google ${args.join(' ')}...`;
 };
 
 export const duckduckgo = async (args: string[]): Promise<string> => {
@@ -154,10 +155,11 @@ export const banner = (args?: string[]): string => {
   ██║  ███╗██║   ██║██║     ██║███████║   ██║   
   ██║   ██║██║   ██║██║     ██║██╔══██║   ██║   
   ╚██████╔╝╚██████╔╝███████╗██║██║  ██║   ██║   
-   ╚═════╝  ╚═════╝ ╚══════╝╚═╝╚═╝  ╚═╝   ╚═╝    
+   ╚═════╝  ╚═════╝ ╚══════╝╚═╝╚═╝  ╚═╝   ╚═╝
 
+Version del software v${packageJson.version}
+
+--
 Escriba 'help' para ver la lista de comandos disponibles.
-Escriba 'sumfetch' para mostrar el resumen.
-Escriba 'repo' o haga clic <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">aqui</a></u> para el repositorio de Github.
 `;
 };
