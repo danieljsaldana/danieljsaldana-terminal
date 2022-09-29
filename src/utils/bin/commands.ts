@@ -4,10 +4,6 @@ import packageJson from '../../../package.json';
 import * as bin from './index';
 import config from '../../../config.json';
 
-
-const packages = Object.keys(packageJson.dependencies);
-const devPackages = Object.keys(packageJson.devDependencies);
-
 // Help
 export const help = async (args: string[]): Promise<string> => {
   const commands = Object.keys(bin).sort().join(', ');
@@ -42,7 +38,7 @@ export const about = async (args: string[]): Promise<string> => {
 Más sobre mí:
 'sumfetch' - breve resumen.
 'resume' - mi portfolio.
-'changelog' - mi github changelog.`;
+'changelog' - mi changelog.`;
 };
 
 export const resume = async (args?: string[]): Promise<string> => {
@@ -161,7 +157,7 @@ export const emacs = async (args?: string[]): Promise<string> => {
 };
 
 export const sudo = async (args?: string[]): Promise<string> => {
-  window.open('https://www.youtube.com/watch?v=gjeOZ4sR7qY', '_blank'); // ...I'm sorry
+  window.open('https://www.youtube.com/watch?v=gjeOZ4sR7qY', '_blank');
   return `Permiso denegado: Un gran poder conlleva una gran responsabilidad.`;
 };
 
@@ -174,14 +170,36 @@ export const reboot = async (args?: string[]): Promise<string> => {
 };
 
 export const lsb_release = async (args: string[]): Promise<string> => {
+  const getPlatform = (): 'Unknown' | 'Windows' | 'MacOS' | 'Linux' => {
+    let os: 'Unknown' | 'Windows' | 'MacOS' | 'Linux' = 'Unknown';
+  
+    if (navigator.userAgent.indexOf('Win') != -1) {
+      os = 'Windows';
+    }
+  
+    if (navigator.userAgent.indexOf('Mac') != -1) {
+      os = 'MacOS';
+    }
+  
+    if (navigator.userAgent.indexOf('Linux') != -1) {
+      os = 'Linux';
+    }
+  
+    return os;
+  };
+  const os = getPlatform();
+  const packages = Object.keys(packageJson.dependencies);
+  const devPackages = Object.keys(packageJson.devDependencies);
+  const resolution = `${window.screen.availWidth}x${window.screen.availHeight}`;  
+
   return `
 ⠀⠀⠀⠀⠀⠀⣶⡶⠋⠀⣠⠀⠑⠖⠒⠒⠒⠯⣤⣦⡀⠹⣦⣀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠙⢛⢶⡾⡇⠀⣠⣤⣀⠀⠀⠀⠀⠈⠙⠻⣞⡉⠀⠀⠀⠀⠀⠀
 ⠀⠠⣤⣄⣀⣀⡔⢡⠎⠀⠁⠎⠉⠉⢻⢷⣦⡀⠀⡄⠀⢢⣀⣹⡆⠀⠀⠀⠀⠀
 ⠀⠀⠈⠓⣤⣀⡇⡏⠀⠀⠀⠀⠀⠀⠸⣜⣓⣩⣿⠇⣠⡤⠭⢿⣇⡀⠀⠀⠀⠀              Host</span>: ${config.ps1_hostname}
-⠀⠀⠀⠀⣿⠉⢸⠁⠀⠀⠀⣠⣴⣶⠏⣰⣦⡉⠁⠈⣄⡐⠛⢿⠇⠙⣦⡟⡄⠀              OS:
+⠀⠀⠀⠀⣿⠉⢸⠁⠀⠀⠀⣠⣴⣶⠏⣰⣦⡉⠁⠈⣄⡐⠛⢿⠇⠙⣦⡟⡄⠀              OS: ${os}
 ⠀⢀⣀⣼⠿⡄⢸⠀⠀⠀⡔⢹⡇⡿⢀⣿⣿⠙⣄⣠⠇⢳⡀⢠⣀⣠⣟⣠⢧⡀              Packages: ${packages.length + devPackages.length} (npm)
-⠈⠛⠳⢤⣤⡇⢸⡀⠀⡼⠀⢸⠁⡇⢸⣿⢻⣰⢛⡿⠖⠛⠋⠉⠛⠛⠋⠁⠀⡷              Resolución: 
+⠈⠛⠳⢤⣤⡇⢸⡀⠀⡼⠀⢸⠁⡇⢸⣿⢻⣰⢛⡿⠖⠛⠋⠉⠛⠛⠋⠁⠀⡷              Resolución: ${resolution}
 ⠀⠀⠀⠀⣿⡀⠸⣇⢀⠇⠀⠈⠀⢣⠘⡏⠀⣿⠏⠐⠋⠙⠒⠲⠶⠶⠶⢶⠛⠁              Licencia: ${packageJson.license}
 ⠀⠀⠀⠀⢸⡷⢦⢿⡌⠀⠀⠀⠀⠀⠄⠹⡚⠋⠀⠀⠀⠀⣠⢆⠀⣀⣠⡟⠀⠀              Version: ${packageJson.version}
 ⠀⠀⢀⣴⣯⡤⣬⡏⢷⡄⠀⠀⠀⠀⠀⠀⠁⢀⢀⣀⠀⣚⡵⠋⠉⠉⠁⠀⠀⠀
