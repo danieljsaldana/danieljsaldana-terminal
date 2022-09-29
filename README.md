@@ -14,12 +14,11 @@ LiveTerm can be used to build a variety of websites:
 
 <p align="center">
 <img src="./demo/demo.gif" width="600"><br>
-<strong>LiveTerm with different themes</strong>
 </p>
 
 <p align="center">
-<img src="./demo/cveinnt.png" width="600"><br>
-<strong><a href="https://cveinnt.com" target=_blank>my personal website</a></strong>
+<img src="./demo/goliat.png" width="600"><br>
+<strong><a href="https://terminal.danieljsaldaña.com" target=_blank>Daniel J. Saldaña - Terminal</a></strong>
 </p>
 
 ## 🚀 Despliega su sitio Goliat en menos de 5 minutos
