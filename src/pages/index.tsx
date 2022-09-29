@@ -39,7 +39,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
     <>
       <Head>
         <title>{config.title}</title>
-        <meta name="description" content="{config.description}"></meta>
+        <meta name="description" content={config.description}></meta>
         <script async defer data-website-id="b4c6a92f-600f-4825-9511-2400e33c422e" src="https://analytics.xn--danieljsaldaa-tkb.com/umami.js"></script>
       </Head>
 
