@@ -1,9 +1,8 @@
 {
-  "readmeUrl": "https://raw.githubusercontent.com/cveinnt/cveinnt/master/README.md",
+  "changelog": "https://raw.githubusercontent.com/danieljesussp/danieljsaldana-terminal/CHANGELOG.md",
   "title": "Daniel J. Saldaña 💾 | Terminal",
   "description": "Terminal interactiva 💻 pon a prueba tus conocimientos de linux!",
   "name": "Daniel J. Saldaña",
-  "ascii": "cveinnt",
   "social": {
     "github": "danieljesussp",
     "linkedin": "daniel-s-p",
@@ -13,8 +12,8 @@
   },
   "email": "info@danieljsaldaña.com",
   "ps1_hostname": "goliat",
-  "ps1_username": "visitante",
-  "repo": "https://github.com",
+  "ps1_username": "guest",
+  "repo": "https://github.com/danieljesussp/danieljsaldana-terminal",
   "resume_url": "https://danieljsaldaña.com",
   "colors": {
     "light": {

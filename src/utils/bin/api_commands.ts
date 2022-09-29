@@ -2,7 +2,7 @@
 
 import { getProjects } from '../api';
 import { getQuote } from '../api';
-import { getReadme } from '../api';
+import { getchangelog } from '../api';
 import { getWeather } from '../api';
 
 export const projects = async (args: string[]): Promise<string> => {
@@ -20,10 +20,10 @@ export const quote = async (args: string[]): Promise<string> => {
   return data.quote;
 };
 
-export const readme = async (args: string[]): Promise<string> => {
-  const readme = await getReadme();
-  return `Abriendo README de gitHub...\n
-  ${readme}`;
+export const changelog = async (args: string[]): Promise<string> => {
+  const changelog = await getchangelog();
+  return `Abriendo changelog de gitHub...\n
+  ${changelog}`;
 };
 
 export const weather = async (args: string[]): Promise<string> => {

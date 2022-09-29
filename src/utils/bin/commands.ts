@@ -35,8 +35,8 @@ export const about = async (args: string[]): Promise<string> => {
 ¡Bienvenidos a mi sitio web!
 Más sobre mí:
 'sumfetch' - breve resumen.
-'currículum' - mi último currículum.
-'readme' - mi github readme.`;
+'resume' - mi portfolio.
+'changelog' - mi github changelog.`;
 };
 
 export const resume = async (args: string[]): Promise<string> => {
