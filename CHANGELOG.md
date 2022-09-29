@@ -1,4 +1,4 @@
-# Changelog
+# Changelog 🎉
 
 Todos los cambios notables en este proyecto se documentarán en los archivos.
 
