@@ -1,11 +1,13 @@
 {
   "readmeUrl": "https://raw.githubusercontent.com/cveinnt/cveinnt/master/README.md",
-  "title": "Daniel J. Saldaña - Terminal",
+  "title": "Daniel J. Saldaña 💾 | Terminal",
+  "description": "Terminal interactiva 💻 pon a prueba tus conocimientos de linux!",
   "name": "Daniel J. Saldaña",
-  "ascii": "liveterm",
+  "ascii": "terminal",
   "social": {
     "github": "danieljesussp",
     "linkedin": "daniel-s-p",
+    "twitter": "danieljsaldana",
     "instagram": "danieljesussp",
     "unsplash": "@danieljsaldana"
   },
@@ -14,22 +16,18 @@
   "ps1_username": "visitante",
   "repo": "https://github.com/",
   "resume_url": "https://danieljsaldaña.com",
-  "donate_urls": {
-    "paypal": "https://paypal.me/",
-    "patreon": "https://patreon.com/"
-  },
   "colors": {
     "light": {
-      "background": "#FBF1C9",
-      "foreground": "#3C3836",
-      "yellow": "#D79921",
+      "background": "#FFF",
+      "foreground": "#000c",
+      "yellow": "#0006",
       "green": "#98971A",
-      "gray": "#7C6F64",
+      "gray": "#000",
       "blue": "#458588",
       "red": "#CA2124"
     },
     "dark": {
-      "background": "#2E3440",
+      "background": "#282a36",
       "foreground": "#E5E9F0",
       "yellow": "#5E81AC",
       "green": "#A3BE8C",

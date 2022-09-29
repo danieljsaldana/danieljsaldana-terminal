@@ -50,25 +50,31 @@ export const email = async (args: string[]): Promise<string> => {
 };
 
 export const github = async (args: string[]): Promise<string> => {
-  window.open(`https://github.com/${config.social.github}/`);
+  window.open(`https://github.com/${config.social.github}`);
 
   return 'Abriendo github...';
 };
 
 export const linkedin = async (args: string[]): Promise<string> => {
-  window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
+  window.open(`https://www.linkedin.com/in/${config.social.linkedin}`);
 
   return 'Abriendo linkedin...';
 };
 
+export const twitter = async (args: string[]): Promise<string> => {
+  window.open(`https://twitter.com/${config.social.twitter}`);
+
+  return 'Abriendo twitter...';
+};
+
 export const instagram = async (args: string[]): Promise<string> => {
-  window.open(`https://www.instagram.com/${config.social.instagram}/`);
+  window.open(`https://www.instagram.com/${config.social.instagram}`);
 
   return 'Abriendo instagram...';
 };
 
 export const unsplash = async (args: string[]): Promise<string> => {
-  window.open(`https://unsplash.com/es/${config.social.unsplash}/`);
+  window.open(`https://unsplash.com/es/${config.social.unsplash}`);
 
   return 'Abriendo unsplash...';
 };
@@ -112,8 +118,7 @@ ingles`;
 };
 
 export const cd = async (args: string[]): Promise<string> => {
-  return `unfortunately, i cannot afford more directories.
-if you want to help, you can type 'donate'.`;
+  return `desafortunadamente, no puedo permitirme más directorios.`;
 };
 
 export const date = async (args: string[]): Promise<string> => {
