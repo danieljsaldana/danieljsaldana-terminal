@@ -165,6 +165,14 @@ export const sudo = async (args?: string[]): Promise<string> => {
   return `Permiso denegado: Un gran poder conlleva una gran responsabilidad.`;
 };
 
+export const reboot = async (args?: string[]): Promise<string> => {
+  setTimeout(function () {
+    window.location.reload();
+  }, 3000);   
+
+  return 'Reiniciando sistema...';
+};
+
 export const lsb_release = async (args: string[]): Promise<string> => {
   return `
 ⠀⠀⠀⠀⠀⠀⣶⡶⠋⠀⣠⠀⠑⠖⠒⠒⠒⠯⣤⣦⡀⠹⣦⣀⠀⠀⠀⠀⠀⠀

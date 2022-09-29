@@ -70,23 +70,20 @@ ossyNMMMNyMMhsssssssssssssshmmmhssssssso       <u><a href="https://github.com
   }    
     else {
     return `               
-                    'c.     
-                 ,xNMM.                      CV
-               .OMMMMo                      -----------
-               OMMM0,                        Sobre mi
-     .;loddo:' loolloddol;.                  ${config.name}
-   cKMMMMMMMMMMNWMMMMMMMMMM0:                <u><a href="${config.resume_url}" target="_blank">resume</a></u>
- .KMMMMMMMMMMMMMMMMMMMMMMMWd.               爵 <u><a href="${config.repo}" target="_blank">Github repo</a></u>
- XMMMMMMMMMMMMMMMMMMMMMMMX.                 -----------
-;MMMMMMMMMMMMMMMMMMMMMMMM:                   Contacto 
-:MMMMMMMMMMMMMMMMMMMMMMMM:                   <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u>
-.MMMMMMMMMMMMMMMMMMMMMMMMX.                  <u><a href="https://github.com/${config.social.github}" target="_blank">github.com/${config.social.github}</a></u>
- kMMMMMMMMMMMMMMMMMMMMMMMMWd.                <u><a href="https://linkedin.com/in/${config.social.linkedin}" target="_blank">linkedin.com/in/${config.social.linkedin}</a></u>
- .XMMMMMMMMMMMMMMMMMMMMMMMMMMk               <u><a href="https://twitter.com/${config.social.twitter}" target="_blank">twitter.com/${config.social.twitter}</a></u>
-  .XMMMMMMMMMMMMMMMMMMMMMMMMK.               <u><a href="https://instagram.com/${config.social.instagram}" target="_blank">instagram.com/${config.social.instagram}</a></u>
-    kMMMMMMMMMMMMMMMMMMMMMMd                -----------
-     ;KMMMMMMMWXXWMMMMMMMk.              
-       .cooc,.    .,coo:.        
+⠀⠀⠀⠀⠀⣀⣀⣀⣀⣠⣤⣤⣄⣀⣀⣀⣀⠀⠀⠀⠀⠀                    CV
+⢀⣠⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣄⡀                   -----------
+⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷                    Sobre mi
+⣿⣿⣿⡿⠛⠉⠉⠙⠿⣿⣿⣿⣿⠿⠋⠉⠉⠛⢿⣿⣿⣿                    ${config.name}
+⣿⣿⣿⣶⣿⣿⣿⣦⠀⢘⣿⣿⡃⠀⣴⣿⣿⣿⣶⣿⣿⣿                    <u><a href="${config.resume_url}" target="_blank">resume</a></u>
+⣿⣿⣿⣏⠉⠀⠈⣙⣿⣿⣿⣿⣿⣿⣋⠁⠀⠉⣹⣿⣿⣿                   爵 <u><a href="${config.repo}" target="_blank">Github repo</a></u>
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿                   -----------
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿                    Contacto 
+⢸⣿⣿⣎⠻⣿⣿⣿⣿⡿⠋⠙⢿⣿⣿⣿⣿⠟⣱⣿⣿⡇                    <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u>
+⠀⢿⣿⣿⣧⠀⠉⠉⠉⠀⢀⡀⠀⠉⠉⠉⠀⣼⣿⣿⡿⠀                    <u><a href="https://linkedin.com/in/${config.social.linkedin}" target="_blank">linkedin.com/in/${config.social.linkedin}</a></u>
+⠀⠈⢻⣿⣿⣷⣶⣶⣶⣶⣿⣿⣶⣶⣶⣶⣾⣿⣿⡟⠁⠀                    <u><a href="https://linkedin.com/in/${config.social.linkedin}" target="_blank">linkedin.com/in/${config.social.linkedin}</a></u>
+⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⠉⠉⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀                    <u><a href="https://twitter.com/${config.social.twitter}" target="_blank">twitter.com/${config.social.twitter}</a></u>
+⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⠀⠀⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀                    <u><a href="https://instagram.com/${config.social.instagram}" target="_blank">instagram.com/${config.social.instagram}</a></u>
+⠀⠀⠀⠀⠀⠀⠀⠙⠻⢿⣦⣴⡿⠟⠋⠀⠀⠀⠀⠀⠀⠀                   -----------
 `;
   }
 };
