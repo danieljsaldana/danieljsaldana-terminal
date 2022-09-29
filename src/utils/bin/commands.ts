@@ -169,7 +169,7 @@ export const reboot = async (args?: string[]): Promise<string> => {
   return 'Reiniciando sistema...';
 };
 
-export const d = async (args: string[]): Promise<string> => {
+export const lsb_release = async (args: string[]): Promise<string> => {
   const getPlatform = (): 'Unknown' | 'Windows' | 'MacOS' | 'Linux' => {
     let os: 'Unknown' | 'Windows' | 'MacOS' | 'Linux' = 'Unknown';
   
