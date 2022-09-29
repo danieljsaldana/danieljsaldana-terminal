@@ -43,15 +43,6 @@ export const resume = async (args: string[]): Promise<string> => {
   return 'Abriendo resumen...';
 };
 
-// Donate
-export const donate = async (args: string[]): Promise<string> => {
-  return `Gracias por su interés.
-Estas son las formas en que puede apoyar mi trabajo:
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
-`;
-};
-
 // Contact
 export const email = async (args: string[]): Promise<string> => {
   window.open(`mailto:${config.email}`);
