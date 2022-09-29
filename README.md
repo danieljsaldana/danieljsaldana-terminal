@@ -96,11 +96,11 @@ El 90 % de las configuraciones de Goliat se realizan a través del archivo `conf
 
 ### Favicons
 
-Los Favicons se encuentran en `público/`, junto con otros archivos que quizás desee cargar en su sitio web. Usé este [sitio web] (https://www.favicon-generator.org/) para generar favicons.
+Los Favicons se encuentran en `público/`, junto con otros archivos que quizás desee cargar en su sitio web. Usé este [sitio web](https://www.favicon-generator.org/) para generar favicons.
 
 ### Banner
 
-También puede cambiar la salida del comando `banner`. Para hacer eso, simplemente pegue su banner generado en `src/utils/bin/commands.ts`. Usé este [sitio web](https://manytools.org/hacker-tools/ascii-banner/) para generar mi banner.
+También puede cambiar la salida del comando `banner`. Para hacer eso, simplemente pegue su banner generado en `src/utils/bin/commands.ts`. Usé este [sitio web](https://manytools.org/hacker-tools/ascii-banner) para generar mi banner.
 
 ### Configuración avanzada
 
