@@ -4,6 +4,7 @@ import packageJson from '../../../package.json';
 import * as bin from './index';
 import config from '../../../config.json';
 
+
 const packages = Object.keys(packageJson.dependencies);
 const devPackages = Object.keys(packageJson.devDependencies);
 
@@ -27,10 +28,12 @@ Escriba 'sumfetch' para mostrar el resumen.
 };
 
 // Redirection
-export const repo = async (args: string[]): Promise<string> => {
-  window.open(`${config.repo}`);
-  return 'Abriendo repositorio de github...';
-};
+export const repo = async (args?: string[]): Promise<string> => {
+  setTimeout(function () {
+    window.open(`${config.repo}`, '_blank');
+  }, 1000);
+  return 'Iniciando repositorio de github...';
+};  
 
 // About
 export const about = async (args: string[]): Promise<string> => {
@@ -42,45 +45,57 @@ Más sobre mí:
 'changelog' - mi github changelog.`;
 };
 
-export const resume = async (args: string[]): Promise<string> => {
-  window.open(`${config.resume_url}`);
-  return 'Abriendo resumen...';
-};
+export const resume = async (args?: string[]): Promise<string> => {
+  setTimeout(function () {
+    window.open(`${config.resume_url}`, '_blank');
+  }, 1000);
+  return 'Iniciando resumen...';
+};  
 
 // Contact
 export const email = async (args: string[]): Promise<string> => {
   window.open(`mailto:${config.email}`);
-  return `Abriendo mailto:${config.email}...`;
+  return `Iniciando mailto:${config.email}...`;
 };
 
-export const github = async (args: string[]): Promise<string> => {
-  window.open(`https://github.com/${config.social.github}`);
+export const github = async (args?: string[]): Promise<string> => {
+  setTimeout(function () {
+    window.open(`https://github.com/${config.social.github}`, '_blank');
+  }, 1000);  
 
-  return 'Abriendo github...';
+  return 'Iniciando github...';
 };
 
-export const linkedin = async (args: string[]): Promise<string> => {
-  window.open(`https://www.linkedin.com/in/${config.social.linkedin}`);
+export const linkedin = async (args?: string[]): Promise<string> => {
+  setTimeout(function () {
+    window.open(`https://www.linkedin.com/in/${config.social.linkedin}`, '_blank');
+  }, 1000);  
 
-  return 'Abriendo linkedin...';
+  return 'Iniciando linkedin...';
 };
 
-export const twitter = async (args: string[]): Promise<string> => {
-  window.open(`https://twitter.com/${config.social.twitter}`);
+export const twitter = async (args?: string[]): Promise<string> => {
+  setTimeout(function () {
+   window.open(`https://twitter.com/${config.social.twitter}`, '_blank');
+  }, 1000);  
 
-  return 'Abriendo twitter...';
+  return 'Iniciando twitter...';
 };
 
-export const instagram = async (args: string[]): Promise<string> => {
-  window.open(`https://www.instagram.com/${config.social.instagram}`);
+export const instagram = async (args?: string[]): Promise<string> => {
+  setTimeout(function () {
+    window.open(`https://www.instagram.com/${config.social.instagram}`, '_blank');
+  }, 1000);   
 
-  return 'Abriendo instagram...';
+  return 'Iniciando instagram...';
 };
 
-export const unsplash = async (args: string[]): Promise<string> => {
-  window.open(`https://unsplash.com/es/${config.social.unsplash}`);
+export const unsplash = async (args?: string[]): Promise<string> => {
+  setTimeout(function () {
+    window.open(`https://unsplash.com/es/${config.social.unsplash}`, '_blank');
+  }, 1000); 
 
-  return 'Abriendo unsplash...';
+  return 'Iniciando unsplash...';
 };
 
 // Search
@@ -150,13 +165,13 @@ export const sudo = async (args?: string[]): Promise<string> => {
   return `Permiso denegado: Un gran poder conlleva una gran responsabilidad.`;
 };
 
-export const lsb_release = (args?: string[]): string => {
+export const lsb_release = async (args: string[]): Promise<string> => {
   return `
 ⠀⠀⠀⠀⠀⠀⣶⡶⠋⠀⣠⠀⠑⠖⠒⠒⠒⠯⣤⣦⡀⠹⣦⣀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠙⢛⢶⡾⡇⠀⣠⣤⣀⠀⠀⠀⠀⠈⠙⠻⣞⡉⠀⠀⠀⠀⠀⠀
 ⠀⠠⣤⣄⣀⣀⡔⢡⠎⠀⠁⠎⠉⠉⢻⢷⣦⡀⠀⡄⠀⢢⣀⣹⡆⠀⠀⠀⠀⠀
 ⠀⠀⠈⠓⣤⣀⡇⡏⠀⠀⠀⠀⠀⠀⠸⣜⣓⣩⣿⠇⣠⡤⠭⢿⣇⡀⠀⠀⠀⠀              Host</span>: ${config.ps1_hostname}
-⠀⠀⠀⠀⣿⠉⢸⠁⠀⠀⠀⣠⣴⣶⠏⣰⣦⡉⠁⠈⣄⡐⠛⢿⠇⠙⣦⡟⡄⠀              OS: 
+⠀⠀⠀⠀⣿⠉⢸⠁⠀⠀⠀⣠⣴⣶⠏⣰⣦⡉⠁⠈⣄⡐⠛⢿⠇⠙⣦⡟⡄⠀              OS:
 ⠀⢀⣀⣼⠿⡄⢸⠀⠀⠀⡔⢹⡇⡿⢀⣿⣿⠙⣄⣠⠇⢳⡀⢠⣀⣠⣟⣠⢧⡀              Packages: ${packages.length + devPackages.length} (npm)
 ⠈⠛⠳⢤⣤⡇⢸⡀⠀⡼⠀⢸⠁⡇⢸⣿⢻⣰⢛⡿⠖⠛⠋⠉⠛⠛⠋⠁⠀⡷              Resolución: 
 ⠀⠀⠀⠀⣿⡀⠸⣇⢀⠇⠀⠈⠀⢣⠘⡏⠀⣿⠏⠐⠋⠙⠒⠲⠶⠶⠶⢶⠛⠁              Licencia: ${packageJson.license}
@@ -175,11 +190,9 @@ export const banner = (args?: string[]): string => {
   ██║  ███╗██║   ██║██║     ██║███████║   ██║   
   ██║   ██║██║   ██║██║     ██║██╔══██║   ██║   
   ╚██████╔╝╚██████╔╝███████╗██║██║  ██║   ██║   
-   ╚═════╝  ╚═════╝ ╚══════╝╚═╝╚═╝  ╚═╝   ╚═╝
+   ╚═════╝  ╚═════╝ ╚══════╝╚═╝╚═╝  ╚═╝   ╚═╝   v${packageJson.version}
 
-Version del software v${packageJson.version}
 
---
 Escriba 'help' para ver la lista de comandos disponibles.
 `;
 };
