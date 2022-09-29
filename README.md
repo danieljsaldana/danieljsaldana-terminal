@@ -1,4 +1,4 @@
-# [💻 Goliat - crear sitios web con estilo de terminal en minutos!](https://terminal.danieljsaldaña.com)
+# [💻 Goliat - Web con estilo de terminal en minutos!](https://terminal.danieljsaldaña.com)
 
 Plantilla de sitio web con estilo de terminal minimalista, altamente personalizable y fácil de usar, con tecnología de Next.js.
 
