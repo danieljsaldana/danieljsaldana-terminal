@@ -106,7 +106,7 @@ También puede cambiar la salida del comando `banner`. Para hacer eso, simplemen
 
 Si desea personalizar aún más su página, ¡siéntase libre de cambiar el código fuente a su gusto!
 
-## Credit
+## Creditos
 
-Based on LiveTerm's awesome [LiveTerm](https://github.com/Cveinnt/LiveTerm).
-Based on M4TT72's awesome [Terminal](https://github.com/m4tt72/terminal).
+- Basado en LiveTerm [LiveTerm](https://github.com/Cveinnt/LiveTerm).
+- Basado en M4TT72 [Terminal](https://github.com/m4tt72/terminal).
