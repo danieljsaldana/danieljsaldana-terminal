@@ -133,7 +133,7 @@ ingles`;
 };
 
 export const cd = async (args: string[]): Promise<string> => {
-  return `desafortunadamente, no puedo permitirme más directorios.`;
+  return `Desafortunadamente, no puedo permitirme más directorios.`;
 };
 
 export const date = async (args: string[]): Promise<string> => {
@@ -169,7 +169,7 @@ export const reboot = async (args?: string[]): Promise<string> => {
   return 'Reiniciando sistema...';
 };
 
-export const lsb_release = async (args: string[]): Promise<string> => {
+export const d = async (args: string[]): Promise<string> => {
   const getPlatform = (): 'Unknown' | 'Windows' | 'MacOS' | 'Linux' => {
     let os: 'Unknown' | 'Windows' | 'MacOS' | 'Linux' = 'Unknown';
   
