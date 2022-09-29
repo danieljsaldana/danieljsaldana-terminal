@@ -1,5 +1,6 @@
 // List of commands that do not require API calls
 
+import { formatDistanceToNow } from 'date-fns';
 import packageJson from '../../../package.json';
 import * as bin from './index';
 import config from '../../../config.json';
@@ -140,22 +141,6 @@ export const date = async (args: string[]): Promise<string> => {
   return new Date().toString();
 };
 
-export const vi = async (args: string[]): Promise<string> => {
-  return `Woah, ¿todavía usas 'vi'? solo prueba 'vim'.`;
-};
-
-export const vim = async (args: string[]): Promise<string> => {
-  return `'vim' está tan desactualizado. ¿Qué hay de 'nvim'?`;
-};
-
-export const nvim = async (args: string[]): Promise<string> => {
-  return `¿'nvim'? demasiado elegante ¿Por qué no 'emacs'?`;
-};
-
-export const emacs = async (args?: string[]): Promise<string> => {
-  return `¿Sabes que? solo usa vscode.`;
-};
-
 export const sudo = async (args?: string[]): Promise<string> => {
   window.open('https://www.youtube.com/watch?v=gjeOZ4sR7qY', '_blank');
   return `Permiso denegado: Un gran poder conlleva una gran responsabilidad.`;
@@ -188,6 +173,9 @@ export const lsb_release = async (args: string[]): Promise<string> => {
     return os;
   };
   const os = getPlatform();
+  const visitedAt = new Date(
+    localStorage.getItem('visitedAt') || new Date().toString(),
+  );
   const packages = Object.keys(packageJson.dependencies);
   const devPackages = Object.keys(packageJson.devDependencies);
   const resolution = `${window.screen.availWidth}x${window.screen.availHeight}`;  
@@ -202,7 +190,7 @@ export const lsb_release = async (args: string[]): Promise<string> => {
 ⠈⠛⠳⢤⣤⡇⢸⡀⠀⡼⠀⢸⠁⡇⢸⣿⢻⣰⢛⡿⠖⠛⠋⠉⠛⠛⠋⠁⠀⡷              Resolución: ${resolution}
 ⠀⠀⠀⠀⣿⡀⠸⣇⢀⠇⠀⠈⠀⢣⠘⡏⠀⣿⠏⠐⠋⠙⠒⠲⠶⠶⠶⢶⠛⠁              Licencia: ${packageJson.license}
 ⠀⠀⠀⠀⢸⡷⢦⢿⡌⠀⠀⠀⠀⠀⠄⠹⡚⠋⠀⠀⠀⠀⣠⢆⠀⣀⣠⡟⠀⠀              Version: ${packageJson.version}
-⠀⠀⢀⣴⣯⡤⣬⡏⢷⡄⠀⠀⠀⠀⠀⠀⠁⢀⢀⣀⠀⣚⡵⠋⠉⠉⠁⠀⠀⠀
+⠀⠀⢀⣴⣯⡤⣬⡏⢷⡄⠀⠀⠀⠀⠀⠀⠁⢀⢀⣀⠀⣚⡵⠋⠉⠉⠁⠀⠀⠀              Tiempo de actividad: ${formatDistanceToNow(visitedAt,)}
 ⠀⠀⠀⠀⠀⠀⠈⠻⣦⣹⣮⡢⢄⣀⣀⣠⢀⣿⠟⠋⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠻⠿⣷⣦⣭⠴⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
   `;
