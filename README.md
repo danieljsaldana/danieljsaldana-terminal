@@ -70,6 +70,11 @@ El 90 % de las configuraciones de Goliat se realizan a través del archivo `conf
   "changelog": 
   "title": 
   "name": 
+  "biografia": "",
+  "experiencia": "",
+  "habilidades": "",
+  "skills": "",
+  "contacto": "",  
   "social": {
     "github": 
     "linkedin": 
