@@ -126,11 +126,34 @@ export const whoami = async (args: string[]): Promise<string> => {
 };
 
 export const ls = async (args: string[]): Promise<string> => {
-  return `me
-gustan
-los
-bulldog
-ingles`;
+  return `biografia.txt
+experiencia.txt
+habilidades.txt
+skills.txt
+contacto.txt`;
+};
+
+export const cat = async (args: string[], callback?: (value: string) => string,): Promise<string> => {
+if (args.length === 0) {
+    return `Selecione un fichero`;
+  }
+
+  switch (args[0]) {
+    case 'biografia.txt':
+      return `${config.biografia}`;
+
+    case 'experiencia.txt':
+      return `${config.experiencia}`;
+
+    case 'habilidades.txt':
+      return `${config.habilidades}`;
+
+    case 'skills.txt':
+      return `${config.skills}`;
+
+    case 'contacto.txt':
+      return `${config.contacto}`;
+  }
 };
 
 export const cd = async (args: string[]): Promise<string> => {
