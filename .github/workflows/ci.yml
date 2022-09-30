@@ -55,8 +55,3 @@ jobs:
     if: github.event.pull_request.merged == true
     needs: [build_and_push_to_registry]
     uses: ./.github/workflows/trivy-image.yml    
-
-  create_an_issue:
-    name: Create an issue
-    if: ${{ always() && contains(join(needs.*.result, ','), 'success') }}
-    uses: ./.github/workflows/create_an_issue.yml
