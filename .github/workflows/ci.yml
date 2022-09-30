@@ -1,0 +1,57 @@
+name: CI + CD
+
+on:
+  push:  
+    branches:
+      - '**'
+      - '!production'
+  pull_request:
+    branches:
+      - '**'      
+    types:
+      - synchronize
+      - closed   
+
+concurrency:
+  group: ci-tests-${{ github.ref }}-1
+  cancel-in-progress: true
+
+jobs:      
+  super_linter:
+    name: Super-Linter scan
+    if: github.event.pull_request.merged == true
+    uses: ./.github/workflows/super-linter.yml
+
+  repo_visualizer:
+    name: Update diagram
+    if: github.event.pull_request.merged == true
+    uses: ./.github/workflows/repo_visualizer.yml    
+
+  release:
+    name: Create release
+    if: github.event.pull_request.merged == true
+    needs: [super_linter, repo_visualizer]
+    uses: ./.github/workflows/release.yml
+
+  delete_older_releases:
+    name: Delete older releases
+    if: github.event.pull_request.merged == true
+    needs: [release]
+    uses: ./.github/workflows/delete-tag-and-release.yml
+
+  lighthouse:
+    name: Lighthouse check action
+    if: github.event.pull_request.merged == true
+    uses: ./.github/workflows/lighthouse.yml
+
+  build_and_push_to_registry:
+    name: Build and push Docker image to GitHub Packages
+    if: github.event.pull_request.merged == true
+    needs: [release]
+    uses: ./.github/workflows/build.yml
+    
+  trivy_scan:
+    name: Trivy image scan
+    if: github.event.pull_request.merged == true
+    needs: [build_and_push_to_registry]
+    uses: ./.github/workflows/trivy-image.yml    
