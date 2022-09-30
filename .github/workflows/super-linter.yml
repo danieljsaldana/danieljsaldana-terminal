@@ -1,0 +1,28 @@
+name: Lint Code scan
+
+on: 
+  workflow_call:
+
+jobs:
+  super-linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "☁️ checkout repository"
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Lint Code Base
+        uses: github/super-linter@v4
+        env:
+          DEFAULT_WORKSPACE: .github
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: production
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Archive super-linter artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: MegaLinter reports
+          path: |
+            super-linter.log

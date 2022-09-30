@@ -28,7 +28,7 @@ Goliat requiere el administrador de paquetes `yarn`. Puede instalar `yarn` [aqu√
 Simplemente ejecute el siguiente comando en su terminal:
 
 ```bash
-sh -c "$(curl -fsSL https://raw.github.com/danieljesussp/danieljsaldana-terminal/blob/main/install/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/danieljesussp/danieljsaldana-terminal/blob/production/install/install.sh)"
 ```
 
 Esto instalar√° Goliat en el directorio actual. Puedes comenzar a construir tu sitio web con:

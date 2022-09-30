@@ -1,0 +1,49 @@
+name: Create release
+
+on:
+  workflow_call:
+
+jobs:
+  version:
+    permissions:
+      contents: write  
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: "☁️ checkout repository"
+        uses: actions/checkout@v3
+
+      - name: Version Increment
+        id: version
+        run: |
+          echo "**********************"
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          npm version minor -m "v%s"
+          version=$(node -p "require('./package.json').version")
+          git tag ${VERSION}
+          git push --force
+          echo "::set-output name=version::${version}"
+          echo "**********************"
+
+      - name: "Create release"
+        uses: release-drafter/release-drafter@v5
+        id: release
+        with:  
+          version: ${{ steps.version.outputs.version }}
+          publish: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update Changelog
+        uses: stefanzweifel/changelog-updater-action@v1
+        with:
+          latest-version: ${{ steps.release.outputs.tag_name }}
+          release-notes: ${{ steps.release.outputs.body }}
+
+      - name: Commit updated CHANGELOG
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          branch: ${{ github.event.release.target_commitish }}
+          commit_message: Update CHANGELOG
+          file_pattern: CHANGELOG.md
