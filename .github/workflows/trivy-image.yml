@@ -1,0 +1,42 @@
+name: Trivy scan image
+
+on:
+  workflow_call:
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build_and_push_to_registry:
+    name: Build and push Docker image to GitHub Packages
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: "Create temporary directory"
+        run: mkdir -p ${{ github.workspace }}/trivy-image/artifacts        
+    
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: '${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest'
+          format: 'table'
+          exit-code: '0'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+          output: trivy-image/artifacts/trivy-image.log
+          severity: 'CRITICAL,HIGH' 
+        env:
+          TRIVY_USERNAME: ${{ github.repository_owner }}
+          TRIVY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}     
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@master
+        with:
+          name: Trivy image reports
+          path: ${{ github.workspace }}/trivy-image/artifacts
