@@ -43,7 +43,7 @@ jobs:
   release:
     name: Create release
     if: github.event.pull_request.merged == true
-    needs: [super_linter, repo_visualizer]
+    needs: [repo_visualizer]
     uses: ./.github/workflows/release.yml
 
   delete_older_releases:
