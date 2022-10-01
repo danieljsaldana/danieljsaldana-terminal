@@ -153,6 +153,9 @@ if (args.length === 0) {
 
     case 'contacto.txt':
       return `${config.contacto}`;
+    
+    default:
+      return `El fichero que quiere leer no existe`;
   }
 };
 

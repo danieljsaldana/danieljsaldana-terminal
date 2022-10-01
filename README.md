@@ -13,10 +13,6 @@ LiveTerm can be used to build a variety of websites:
 ## 📸 Showcase
 
 <p align="center">
-<img src="./demo/demo.gif" width="600"><br>
-</p>
-
-<p align="center">
 <img src="./demo/goliat.png" width="600"><br>
 <strong><a href="https://terminal.danieljsaldaña.com" target=_blank>Daniel J. Saldaña - Terminal</a></strong>
 </p>
