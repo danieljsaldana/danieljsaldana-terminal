@@ -16,11 +16,24 @@ concurrency:
   group: ci-tests-${{ github.ref }}-1
   cancel-in-progress: true
 
-jobs:      
+jobs:   
+  gitguardian:
+    name: GitGuardian scan
+    if: github.event_name == 'pull_request' && github.event.action == 'synchronize' || contains(github.event.head_commit.message, 'task completed') || contains(github.event.head_commit.message, 'issue resolved')
+    uses: ./.github/workflows/gitguardian.yml
+    secrets:
+      GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
+
   super_linter:
     name: Super-Linter scan
-    if: github.event.pull_request.merged == true
+    if: github.event_name == 'pull_request' && github.event.action == 'synchronize' || contains(github.event.head_commit.message, 'task completed') || contains(github.event.head_commit.message, 'issue resolved')
     uses: ./.github/workflows/super-linter.yml
+
+  create_pull_request:
+    name: Create pull request
+    if: contains(github.event.head_commit.message, 'issue resolved') 
+    needs: [super_linter, gitguardian]
+    uses: ./.github/workflows/create-pull-request.yml 
 
   repo_visualizer:
     name: Update diagram
