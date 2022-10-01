@@ -29,6 +29,7 @@ jobs:
           committer: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
+          branch: ${{ github.ref }}
           delete-branch: true
           base: production
           title: 'v${{ steps.version.outputs.version }} release'
