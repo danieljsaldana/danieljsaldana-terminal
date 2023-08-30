@@ -59,8 +59,8 @@ ossyNMMMNyMMhsssssssssssssshmmmhssssssso       <u><a href="mailto:${config.em
 ossyNMMMNyMMhsssssssssssssshmmmhssssssso       <u><a href="https://github.com/${config.social.github}" target="_blank">github.com/${config.social.github}</a></u>
 +sssshhhyNMMNyssssssssssssyNMMMysssssss+       <u><a href="https://linkedin.com/in/${config.social.linkedin}" target="_blank">linkedin.com/in/${config.social.linkedin}</a></u>
 .ssssssssdMMMNhsssssssssshNMMMdssssssss.       <u><a href="https://twitter.com/${config.social.twitter}" target="_blank">twitter.com/${config.social.twitter}</a></u>
- /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/        <u><a href="https://instagram.com/${config.social.instagram}" target="_blank">instagram.com/${config.social.instagram}</a></u>
-  +sssssssssdmydMMMMMMMMddddyssssssss+        -----------
+ /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/       -----------
+  +sssssssssdmydMMMMMMMMddddyssssssss+        
    /ssssssssssshdmNNNNmyNMMMMhssssss/      
     .ossssssssssssssssssdMMMNysssso.
       -+sssssssssssssssssyyyssss+-

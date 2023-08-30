@@ -74,7 +74,6 @@ El 90 % de las configuraciones de Goliat se realizan a través del archivo `conf
   "social": {
     "github": 
     "linkedin": 
-    "instagram": 
     "unsplash":
   },
   "email": 

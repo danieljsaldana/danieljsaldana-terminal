@@ -79,14 +79,6 @@ export const twitter = async (args?: string[]): Promise<string> => {
   return 'Iniciando twitter...';
 };
 
-export const instagram = async (args?: string[]): Promise<string> => {
-  setTimeout(function () {
-    window.open(`https://www.instagram.com/${config.social.instagram}`, '_blank');
-  }, 1000);   
-
-  return 'Iniciando instagram...';
-};
-
 export const unsplash = async (args?: string[]): Promise<string> => {
   setTimeout(function () {
     window.open(`https://unsplash.com/es/${config.social.unsplash}`, '_blank');
