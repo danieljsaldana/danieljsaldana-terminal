@@ -16,8 +16,8 @@ const sumfetch = async (args: string[]): Promise<string> => {
 .MMMMMMMMMMMMMMMMMMMMMMMMX.                  <u><a href="https://github.com/${config.social.github}" target="_blank">github.com/${config.social.github}</a></u>
  kMMMMMMMMMMMMMMMMMMMMMMMMWd.                <u><a href="https://linkedin.com/in/${config.social.linkedin}" target="_blank">linkedin.com/in/${config.social.linkedin}</a></u>
  .XMMMMMMMMMMMMMMMMMMMMMMMMMMk               <u><a href="https://twitter.com/${config.social.twitter}" target="_blank">twitter.com/${config.social.twitter}</a></u>
-  .XMMMMMMMMMMMMMMMMMMMMMMMMK.               <u><a href="https://instagram.com/${config.social.instagram}" target="_blank">instagram.com/${config.social.instagram}</a></u>
-    kMMMMMMMMMMMMMMMMMMMMMMd                -----------
+  .XMMMMMMMMMMMMMMMMMMMMMMMMK.              -----------
+    kMMMMMMMMMMMMMMMMMMMMMMd                
      ;KMMMMMMMWXXWMMMMMMMk.              
        .cooc,.    .,coo:.        
 `;
@@ -37,8 +37,8 @@ llllllllllllll  lllllllllllllllllll           Contacto
 llllllllllllll  lllllllllllllllllll           <u><a href="https://github.com/${config.social.github}" target="_blank">github.com/${config.social.github}</a></u>
 llllllllllllll  lllllllllllllllllll           <u><a href="https://linkedin.com/in/${config.social.linkedin}" target="_blank">linkedin.com/in/${config.social.linkedin}</a></u>
 llllllllllllll  lllllllllllllllllll           <u><a href="https://twitter.com/${config.social.twitter}" target="_blank">twitter.com/${config.social.twitter}</a></u>
-llllllllllllll  lllllllllllllllllll           <u><a href="https://instagram.com/${config.social.instagram}" target="_blank">instagram.com/${config.social.instagram}</a></u>
 llllllllllllll  lllllllllllllllllll          -----------
+llllllllllllll  lllllllllllllllllll         
 \`'ccllllllllll  lllllllllllllllllll
        \`' \*::  :ccllllllllllllllll
                        \`\`\`\`''*::cll
@@ -82,8 +82,8 @@ ossyNMMMNyMMhsssssssssssssshmmmhssssssso       <u><a href="https://github.com
 ⠀⢿⣿⣿⣧⠀⠉⠉⠉⠀⢀⡀⠀⠉⠉⠉⠀⣼⣿⣿⡿⠀                    <u><a href="https://linkedin.com/in/${config.social.linkedin}" target="_blank">linkedin.com/in/${config.social.linkedin}</a></u>
 ⠀⠈⢻⣿⣿⣷⣶⣶⣶⣶⣿⣿⣶⣶⣶⣶⣾⣿⣿⡟⠁⠀                    <u><a href="https://linkedin.com/in/${config.social.linkedin}" target="_blank">linkedin.com/in/${config.social.linkedin}</a></u>
 ⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⠉⠉⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀                    <u><a href="https://twitter.com/${config.social.twitter}" target="_blank">twitter.com/${config.social.twitter}</a></u>
-⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⠀⠀⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀                    <u><a href="https://instagram.com/${config.social.instagram}" target="_blank">instagram.com/${config.social.instagram}</a></u>
-⠀⠀⠀⠀⠀⠀⠀⠙⠻⢿⣦⣴⡿⠟⠋⠀⠀⠀⠀⠀⠀⠀                   -----------
+⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⠀⠀⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀                   -----------
+⠀⠀⠀⠀⠀⠀⠀⠙⠻⢿⣦⣴⡿⠟⠋⠀⠀⠀⠀⠀⠀⠀                   
 `;
   }
 };

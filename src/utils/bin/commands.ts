@@ -46,7 +46,7 @@ export const resume = async (args?: string[]): Promise<string> => {
   setTimeout(function () {
     window.open(`${config.resume_url}`, '_blank');
   }, 1000);
-  return 'Iniciando resumen...';
+  return 'Soy un apasionado Product Owner con más de 7 años en tecnología. He ejercido roles como Software Arquitect, DevOps, SRE y SysAdmin. Mi 🔥 pasión por la tecnología me llevó a especializarme en la nube ☁️. Poseo 19 certificaciones en Azure, 3 en AWS y 1 en Google Cloud, lo que me capacita para crear soluciones innovadoras y de calidad. Siempre busco aprender y mantenerme actualizado con las últimas tendencias tecnológicas 📚🚀. Con experiencia en roles técnicos y un enfoque en la innovación, he crecido profesionalmente 💼. ¡Estoy emocionado por enfrentar nuevos desafíos y aplicar mis habilidades en soluciones impactantes! 🌟';
 };  
 
 // Contact
@@ -101,14 +101,14 @@ export const google = async (args: string[]): Promise<string> => {
   return `Buscando en google ${args.join(' ')}...`;
 };
 
-export const duckduckgo = async (args: string[]): Promise<string> => {
-  window.open(`https://duckduckgo.com/?q=${args.join(' ')}`);
-  return `Buscando duckduckgo para ${args.join(' ')}...`;
+export const blog = async (args: string[]): Promise<string> => {
+  window.open(`http://blog.danieljsaldana.dev`);
+  return `Espero ayudarte a seguir mejorando 😄`;
 };
 
-export const bing = async (args: string[]): Promise<string> => {
-  window.open(`https://bing.com/search?q=${args.join(' ')}`);
-  return `¿Wow en serio? Estás usando Bing para ${args.join(' ')}?`;
+export const portfolio = async (args: string[]): Promise<string> => {
+  window.open(`http://danieljsaldana.dev`);
+  return `Espero que te guste mi portfolio`;
 };
 
 export const reddit = async (args: string[]): Promise<string> => {
@@ -116,7 +116,7 @@ export const reddit = async (args: string[]): Promise<string> => {
   return `Buscando reddit para ${args.join(' ')}...`;
 };
 
-// Typical linux commands
+// Typical linux commands,
 export const echo = async (args: string[]): Promise<string> => {
   return args.join(' ');
 };
@@ -135,7 +135,7 @@ contacto.txt`;
 
 export const cat = async (args: string[], callback?: (value: string) => string,): Promise<string> => {
 if (args.length === 0) {
-    return `Selecione un fichero`;
+    return `Defina un fichero`;
   }
 
   switch (args[0]) {
@@ -175,7 +175,7 @@ export const sudo = async (args?: string[]): Promise<string> => {
 export const reboot = async (args?: string[]): Promise<string> => {
   setTimeout(function () {
     window.location.reload();
-  }, 3000);   
+  }, 3000);
 
   return 'Reiniciando sistema...';
 };
