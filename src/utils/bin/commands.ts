@@ -164,6 +164,11 @@ export const sudo = async (args?: string[]): Promise<string> => {
   return `Permiso denegado: Un gran poder conlleva una gran responsabilidad.`;
 };
 
+export const bom = async (args?: string[]): Promise<string> => {
+  window.open('https://www.youtube.com/watch?v=pnGpJJBP384Y', '_blank');
+  return `Dentro del pecho hay algo que hace bom, bom, bom, bom si se te para ya puedes decir adiós. `;
+};
+
 export const reboot = async (args?: string[]): Promise<string> => {
   setTimeout(function () {
     window.location.reload();
